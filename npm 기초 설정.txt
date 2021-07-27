@@ -1,0 +1,24 @@
+1. npm init - package.json
+				- scripts -> 사용자 정의 명령어(npm run)
+				
+2. 필요한 모듈
+	express, morgan, dotenv, nunjucks
+	npm i -D nodemon
+	
+3. 필요한 모듈 require
+	express, morgan, dotenv, nunjucks, path
+	
+4. listen ... port -> 변경가능하게 .env 파일로 관리
+app.set('PORT',process.env.PORT||3000);
+
+5. 없는 페이지 처리 라우터 + 오류 처리 라우터
+
+6. 필요한 미들웨어 등록
+	morgan, express.static, body-parser(express.json()), express.urlencoded({exteded:false})
+	
+7.	템플릿 엔진 설정
+	app.set('view engine','템플릿 확장자 - html');
+	nunjucks.configure('템플릿 디렉토리',{
+		express:익스프레스 객체 (app),
+		watch : true, (자동 갱신)
+	});
